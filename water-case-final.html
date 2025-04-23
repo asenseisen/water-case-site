@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Case – Калъф за под вода</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        header {
+            background-color: #6a2c9c;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .btn {
+            background-color: #6a2c9c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #5c2594;
+        }
+        section {
+            display: none;
+            padding: 50px 20px;
+        }
+        #section1 {
+            display: block;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .form-input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .review-box {
+            background: #fdfdfd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        .stars {
+            color: #FFD700;
+            font-size: 18px;
+        }
+        .overall-rating {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .sum {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        #countdown {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background-color: #6a2c9c;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Water Case – Калъф за под вода</h1>
+    <p>Цена: 19.99 лв (намалена от 35 лв)</p>
+    <div id="countdown"></div>
+</header>
+
+<section id="section1">
+    <div class="container" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+        <div style="flex: 1; min-width: 300px;">
+            <img src="https://s.alicdn.com/@sc04/kf/H248c4ff26d0440b9b2705052bdbfaa542.jpg_720x720q50.jpg"
+                 alt="Water Case - Калъф за под вода" style="width: 100%; max-width: 350px; border-radius: 12px;">
+        </div>
+        <div style="flex: 2; min-width: 300px;">
+            <h2>Water Case</h2>
+            <p>Калъф за под вода, идеален за защита на телефона при плуване, на плажа или в дъжд.</p>
+            <p><strong style="font-size: 18px;">Само за 19.99 лв</strong> <span style="text-decoration: line-through;">(вместо 35 лв)</span></p>
+            <p>Остават само <strong>7</strong> бройки!</p>
+            <label for="quantity">Избери бройки:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" class="form-input" style="width: 80px;">
+            <br><br>
+            <button class="btn" onclick="showSection(2)">Купи сега</button>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Ревюта от клиенти</h2>
+        <div class="overall-rating">Обща оценка: 
+            <span class="stars">★★★★★</span> 5/5
+        </div>
+        <div class="review-box"><p><strong>Мария Петрова:</strong> Много съм доволна! Калъфът се държа страхотно по време на почивката ни на морето.</p><div class="stars">★★★★★</div></div>
+        <div class="review-box"><p><strong>Иван Георгиев:</strong> Страхотен продукт, не пусна вода вътре. Препоръчвам го с две ръце!</p><div class="stars">★★★★★</div></div>
+        <div class="review-box"><p><strong>Елена Костова:</strong> Качествена изработка и удобен за ползване дори под вода!</p><div class="stars">★★★★★</div></div>
+        <div class="review-box"><p><strong>Георги Тодоров:</strong> Много полезен за ваканция. Доволен съм.</p><div class="stars">★★★★☆</div></div>
+    </div>
+</section>
+
+<section id="section2">
+    <div class="container">
+        <h2>Попълнете вашите данни</h2>
+        <div class="form-container">
+            <form>
+                <input type="text" class="form-input" placeholder="Име и фамилия" required><br>
+                <input type="email" class="form-input" placeholder="Имейл адрес" required><br>
+                <input type="tel" class="form-input" placeholder="Телефонен номер" required><br>
+                <input type="text" class="form-input" placeholder="Град" required><br>
+                <input type="text" class="form-input" placeholder="Адрес за доставка" required><br>
+                <label><input type="checkbox" id="insurance"> Застраховка (2 лв)</label><br><br>
+                <button type="button" class="btn" onclick="showSection(3)">Продължи към плащане</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section id="section3">
+    <div class="container">
+        <h2>Потвърдете поръчката</h2>
+        <p class="sum">Цена на продукта: 19.99 лв</p>
+        <p>Доставка: 5 лв</p>
+        <p id="insuranceCost"></p>
+        <p><strong>Обща сума:</strong> <span id="finalSum">24.99 лв</span></p>
+        <p><strong>Метод на плащане:</strong> Наложен платеж</p>
+        <button class="btn" onclick="showSection(4)">Плати</button>
+    </div>
+</section>
+
+<section id="section4">
+    <div class="container">
+        <h2>Поръчката ви е приета!</h2>
+        <p>Благодарим ви за поръчката. Очаквайте потвърждение по телефона и имейл.</p>
+        <p>Ще получите продукта си в рамките на 2-5 работни дни.</p>
+    </div>
+</section>
+
+<script>
+    function showSection(sectionNumber) {
+        document.querySelectorAll('section').forEach(section => section.style.display = 'none');
+        document.getElementById('section' + sectionNumber).style.display = 'block';
+    }
+    document.querySelector('#insurance')?.addEventListener('change', () => {
+        const insurance = document.getElementById('insurance').checked;
+        const finalSum = document.getElementById('finalSum');
+        document.getElementById('insuranceCost').textContent = insurance ? "Застраховка: 2 лв" : "";
+        finalSum.textContent = insurance ? "26.99 лв" : "24.99 лв";
+    });
+    function startCountdown() {
+        const countdown = document.getElementById('countdown');
+        const now = new Date();
+        const target = new Date();
+        target.setHours(Math.floor(now.getHours() / 12) * 12 + 12, 0, 0, 0);
+        const interval = setInterval(() => {
+            const diff = target - new Date();
+            if (diff <= 0) {
+                clearInterval(interval);
+                startCountdown();
+            } else {
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                countdown.textContent = `Остават ${hours}ч ${minutes}м ${seconds}с до края на офертата!`;
+            }
+        }, 1000);
+    }
+    startCountdown();
+</script>
+
+</body>
+</html>
